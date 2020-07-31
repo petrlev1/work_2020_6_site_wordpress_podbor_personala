@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'levendeev2_ts1' );
 
 /** Имя пользователя MySQL */
-define( 'DB_USER', 'levendeev2_ts1' );
+define( 'DB_USER', 'root' );
 
 /** Пароль к базе данных MySQL */
-define( 'DB_PASSWORD', 'testSite1' );
+define( 'DB_PASSWORD', '' );
 
 /** Имя сервера MySQL */
 define( 'DB_HOST', 'localhost' );
