@@ -1,0 +1,101 @@
+#wp-admin-bar-comments, #wpadminbar { display:none !important }
+
+
+* { margin: 0}
+body { margin: 0; font-family: 'Roboto', sans-serif; font-size: 21px; font-weight: 300; background: #FFF5F5 }
+
+
+
+a { text-decoration: none }
+a:hover { text-decoration: none }
+a:visited { text-decoration: none }
+
+.row { margin: auto 0 }
+
+#wrapper { position: relative; }
+
+div { width: 100% }
+
+.container-fluid { margin: 0; padding: 0 }
+
+.back1 { width: 100%; background: url(img/back1.jpg) center no-repeat; background-size: cover; padding: 20px 0 20px 0 }
+.back2 { background: #FFF5F5 }
+
+.hoverShad { transition: all ease-out 0.3s; }
+.hoverShad:hover { box-shadow: 0 0 30px rgba(0,0,0,0.3); }
+.cornerradius { border-radius: 50px;}
+
+.head1 { width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.1); text-align: center; background:#fff }
+
+.logo1 { display: inline-block;  width: 30% }
+.logo1 img { width: 100% }
+
+.logo2 { font-size: 17px; color: #A3A3A3; }
+.logo3 { background: linear-gradient(92.36deg, #7E4E9F 2.21%, #EA5F84 99.69%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #EA5F84; }
+
+.icons1 { text-align: center; margin: 30px 0 0 0 }
+
+.but1 { display: block; width: 100%; text-align: center; background: linear-gradient(94.81deg, #7E4E9F 2.21%, #EA5F84 99.69%); color: #fff; font-size: 15px; font-weight: 300; padding: 20px 10px; margin: 20px 5px; border-radius: 40px; border-style: none;  }
+.but1:hover { color: #fff; }
+.but1:active { border: none; }
+
+.butWhite { display: block; color: #E67294; text-align: center; background: #fff; font-size: 15px; padding: 20px 10px; margin: 20px 5px; border-radius: 40px; border: 3px solid #E67294; }
+
+.but_ic { }
+
+.tit1 { font-size: 22px; text-align: center; margin: 20px 0; background: linear-gradient(92.36deg, #7E4E9F 2.21%, #EA5F84 99.69%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #EA5F84; }
+
+h2 { font-size: 24px; font-weight: 400; text-align: center; margin: 20px 0 20px 0; background: linear-gradient(92.36deg, #7E4E9F 2.21%, #EA5F84 99.69%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #EA5F84; }
+
+.note1 { color: #FF6D6D; font-size: 14px; font-weight: 400; padding: 8px 12px; background: #FFEEE6;
+border-radius: 12px; }
+
+.inp1 { color: #757575;
+    width: 99%;
+    font-size: 18px;
+background: #FFFFFF;
+border: 1px solid #D2D2D2;
+box-sizing: border-box;
+border-radius: 12px;
+padding: 10px 15px;}
+
+.displayNone { display: none }
+
+.inp1_open_res:checked ~ .displayNone { display: block }
+.inp1_close_res:checked ~ .displayNone { display: block }
+
+.reg_anket .inp1 { margin: 10px 0 }
+
+.radio_group { font-size: 21px; font-weight: 400 }
+.radio_group label { margin: 0 30px 0 0 }
+.radio_group input { margin: 0 10px 0 0 }
+
+.check_group { font-size: 16px; font-weight: 300; margin: 20px 0 10px 0 }
+
+.table1 { font-size: 14px; padding: 20px; margin: 0 0 5px 0; background: #fff; min-height: 300px; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05); transition: all ease-out 0.2s; }
+.table1:hover { cursor: pointer; border-radius: 30px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); }
+.table1Img { position: absolute; width: 150px; height: 150px; background-image: url(img/ic_photoEmpt.svg); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.table1Cont { padding: 0 0 0 170px; line-height: 17px; }
+.table1Cont li { display: block; padding: 3px 0 }
+.table1Cont li span { display: block; font-size: 11px; font-weight: bold; line-height: 14px; }
+.table1Link1 { display:block; font-size: 14px; color: #EA5F84; padding: 10px 0 0 0 }
+
+.DetailContAll { margin: 20px 0 0 0; background-color: #fff; }
+.DetailCont { padding: 30px; }
+.DetailCont2 { font-size: 19px; }
+.DetailCont2 li { display: block; padding: 3px 0 5px 0; }
+.DetailCont2 span { display: block; font-size: 14px; font-weight: bold; }
+.DetailContImg { position: relative; width: 250px; height: 250px; background-image: url(img/ic_photoEmpt.svg); background-repeat: no-repeat; background-size: cover; background-position: center; }
+
+.menu { display:none }
+.menu-menu-1-container { position:fixed; width: 300px; bottom:0; right:0; font-size: 14px; z-index:2 }
+
+
+.blog .hideInBlog { display: none }
+.single-post .hideInDetail { display: none }
+.author .hideInDetail { display: none }
+
+
+
+
+

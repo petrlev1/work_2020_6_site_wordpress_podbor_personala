@@ -1,0 +1,33 @@
+.block-editor-writing-flow__click-redirect, .menu-icon-comments, .menu-icon-tools, .menu-icon-dashboard, .error, .user-admin-color-wrap, .components-modal__screen-overlay, .user-rich-editing-wrap, .user-comment-shortcuts-wrap, .user-admin-bar-front-wrap, .user-language-wrap, .user-description-wrap, .user-url-wrap, .wp-heading-inline, .wp-submenu-wrap { display:none !important  }
+
+#dashboard-widgets-wrap, #wpfooter, #wp-admin-bar-wp-logo, #wp-admin-bar-comments, #collapse-button, #wp-admin-bar-new-content, #wp-admin-bar-top-secondary, #wp-admin-bar-archive, #wp-admin-bar-updates { display:none !important }
+
+
+
+/* Table */
+.column-categories, .column-author, .column-tags, .column-comments, .column-date, .tablenav, .wp-list-table thead, .wp-list-table tfoot { display:none !important }
+
+.wp-list-table input { display:none !important }
+
+
+/* Posts */
+.block-editor-block-list__layout, .block-editor-editor-skeleton__sidebar, .editor-post-switch-to-draft, .is-pressed, .edit-post-more-menu, .editor-post-preview, .components-dropdown, .row-actions, .search-box { display:none !important }
+
+#screen-meta-links { display:none !important }
+
+
+
+/* Colors */
+.edit-post-fullscreen-mode-close { }
+
+#adminmenuback, #adminmenuwrap {
+    background-color: #7E4E9F !important;
+}
+
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+    background-color: #7E4E9F !important;
+}
+
+#wpadminbar {
+    background-color: #7E4E9F !important;
+}
