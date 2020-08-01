@@ -94,6 +94,10 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 	<!--<![endif]-->
 	<head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
+	
+	<link rel="stylesheet" href="/bootstrap.min.css">
+<link rel="stylesheet" href="/style.css">
+
 	<title><?php echo $login_title; ?></title>
 	<?php
 
@@ -196,7 +200,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 
 	?>
 	</head>
-	<body class="login no-js <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+	<body class="login no-js <?php echo esc_attr( implode( ' ', $classes ) ); ?>" style="background: #FFF5F5;">
 	<script type="text/javascript">
 		document.body.className = document.body.className.replace('no-js','js');
 	</script>
@@ -209,8 +213,13 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 	do_action( 'login_header' );
 
 	?>
-	<div id="login">
-		<h1><a href="<?php echo esc_url( $login_header_url ); ?>"><?php echo $login_header_text; ?></a></h1>
+	
+	<div style="text-align:center"><a href="/" class="logo1"><img src="/img/logo.png"></a></div>
+	
+	<div class="logo3" style="font-size:24px; text-align:center"><a href="/wp-admin/edit.php">Вход в личный кабинет</a></div>
+	
+	<div id="login" style="width: 80%; background: #FFF5F5;">
+		
 	<?php
 	/**
 	 * Filters the message to display above the login form.
@@ -286,14 +295,16 @@ function login_footer( $input_id = '' ) {
 	// Don't allow interim logins to navigate away from the page.
 	if ( ! $interim_login ) {
 		?>
-		<p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		
+		<!-- <p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<?php
 
 		/* translators: %s: Site title. */
 		printf( _x( '&larr; Back to %s', 'site' ), get_bloginfo( 'title', 'display' ) );
 
 		?>
-		</a></p>
+		</a></p> -->
+		
 		<?php
 
 		the_privacy_policy_link( '<div class="privacy-policy-page-link">', '</div>' );
@@ -1104,15 +1115,18 @@ switch ( $action ) {
 			<br class="clear" />
 			<input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
 			<p class="submit">
-				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e( 'Register' ); ?>" />
+				<input type="submit" name="wp-submit" id="wp-submit" class="but1" style="font-size: 24px; padding: 10px;" value="<?php esc_attr_e( 'Register' ); ?>" />
 			</p>
 		</form>
 
+<!--
 		<p id="nav">
 			<a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e( 'Log in' ); ?></a>
 				<?php echo esc_html( $login_link_separator ); ?>
 			<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?' ); ?></a>
 		</p>
+		-->
+		
 		<?php
 
 		login_footer( 'user_login' );
@@ -1361,16 +1375,16 @@ switch ( $action ) {
 		wp_enqueue_script( 'user-profile' );
 		?>
 
-		<form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
-			<p>
-				<label for="user_login"><?php _e( 'Username or Email Address' ); ?></label>
-				<input type="text" name="log" id="user_login"<?php echo $aria_describedby_error; ?> class="input" value="<?php echo esc_attr( $user_login ); ?>" size="20" autocapitalize="off" />
-			</p>
+		<form name="loginform" id="loginform" style="background:#FFF5F5" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
+			
+				<label for="user_login" class="logo3" style="font-size:30px;"><?php _e( 'Username or Email Address' ); ?></label>
+				<input type="text" name="log" id="user_login" style="background: #FFFFFF; font-size: 21px; color: #000; border: 1px solid #D2D2D2; border-radius: 12px; padding:10px;"<?php echo $aria_describedby_error; ?> class="input" value="<?php echo esc_attr( $user_login ); ?>" size="20" autocapitalize="off" />
+			
 
 			<div class="user-pass-wrap">
-				<label for="user_pass"><?php _e( 'Password' ); ?></label>
+				<label for="user_pass" class="logo3" style="font-size:30px;"><?php _e( 'Password' ); ?></label>
 				<div class="wp-pwd">
-					<input type="password" name="pwd" id="user_pass"<?php echo $aria_describedby_error; ?> class="input password-input" value="" size="20" />
+					<input type="password" name="pwd" id="user_pass" style="background: #FFFFFF; font-size: 21px; color: #000; border: 1px solid #D2D2D2; border-radius: 12px; padding:10px;"<?php echo $aria_describedby_error; ?> class="input password-input" value="" size="20" />
 					<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Show password' ); ?>">
 						<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
 					</button>
@@ -1386,9 +1400,9 @@ switch ( $action ) {
 			do_action( 'login_form' );
 
 			?>
-			<p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <label for="rememberme"><?php esc_html_e( 'Remember Me' ); ?></label></p>
+			<p class="forgetmenot" style="padding:10px;"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <label for="rememberme"><?php esc_html_e( 'Remember Me' ); ?></label></p>
 			<p class="submit">
-				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e( 'Log In' ); ?>" />
+				<input type="submit" name="wp-submit" id="wp-submit" class="but1" style="font-size:24px; padding:10px;" value="<?php esc_attr_e( 'Log In' ); ?>" />
 				<?php
 
 				if ( $interim_login ) {
@@ -1421,16 +1435,16 @@ switch ( $action ) {
 
 				if ( ! isset( $_GET['checkemail'] ) || ! in_array( $_GET['checkemail'], array( 'confirm', 'newpass' ), true ) ) {
 					if ( get_option( 'users_can_register' ) ) {
-						$registration_url = sprintf( '<a href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
+						$registration_url = sprintf( '<a href="%s" class="but1" style="color:#fff; font-size: 24px; padding: 10px;">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
 
 						/** This filter is documented in wp-includes/general-template.php */
 						echo apply_filters( 'register', $registration_url );
 
-						echo esc_html( $login_link_separator );
+						//echo esc_html( $login_link_separator );
 					}
 
 					?>
-					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?' ); ?></a>
+					<div style="text-align:center; margin: 20px 0 20px 0"><a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" style="font-size:21px;"><?php _e( 'Lost your password?' ); ?></a></div>
 					<?php
 				}
 
